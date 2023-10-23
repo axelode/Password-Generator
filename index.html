@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>PASSWORD GENERATOR</title>
+  </head>
+  <body>
+    <form onsubmit="return false;" id="back">
+      <div class="container">
+        <div class="length">
+          <label for="passwordLength">Password Length</label>
+          <input type="number" id="passwordLength" value="24">
+        </div>
+
+        <div class="btn">
+          <label for="includeSymbols">Contain Symbols</label>
+          <label class="switch">
+          <input type="checkbox" id="includeSymbols">
+          <span class="slider round"></span>
+        </label>
+        </div>
+
+        <div class="btn-sub">
+          <button onclick="document.getElementById('password').value = generatePassword();">Generate Password</button>
+        </div>
+
+        <div class="gen-pass">
+          <label for="password">Generated Password</label>
+          <input type="text" id="password" class="gen-pass" readonly>
+        </div>
+
+        <div class="btn-copy">
+          <button onclick="copyPassword()">Copy</button>
+        </div>
+    </form>
+  </body>
+</html>
